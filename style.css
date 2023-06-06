@@ -1,0 +1,88 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 20px;
+    color: #444;
+    background: #eee;
+  }
+  
+  #app {
+    max-width: 600px;
+    margin: auto;
+    height: 90vh;
+    border: 1px solid #ddd;
+    background: #fff;
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #dialogues {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow: auto;
+  }
+
+  #dialogues .guide, 
+  #dialogues .regulator {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    max-width: 80%;
+    align-self: flex-start;
+  }
+
+  #dialogues .company {
+    background-color: #b4b4b4ce;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    max-width: 80%;
+    align-self: flex-start;
+  }
+
+  #dialogues .choice {
+    background-color: #008CBA;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    max-width: 80%;
+    align-self: flex-end;
+    color: white;
+    text-align: right;
+  }
+
+  #choices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .button {
+    background: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    width: 80%;
+    margin: 10px auto;
+  }
+  
+  .button:hover {
+    background: #4CAF50;
+    color: white;
+  }

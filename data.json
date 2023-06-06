@@ -1,0 +1,468 @@
+{
+  "start": "start_scene",
+  "scenes": {
+    "start_scene": {
+      "role": "guide",
+      "scene": "Hey there! Ready to dive into the world of AI assessment?",
+      "choices": [
+        {
+          "option": "Absolutely! Let's get started.",
+          "public": 60
+        },
+        {
+          "option": "I'm a little nervous, but ready to learn.",
+          "public": 40
+        }
+      ],
+      "next": ["guide_intro", "guide_reassurance"]
+    },
+    "guide_intro": {
+      "role": "guide",
+      "scene": "Fantastic! First up, let's compare two AI technologies: the Public Behavior Insight Scanner (PBIS) and the Emotional Quotient Identifier (EQI).\n\nPBIS: The Public Behavior Insight Scanner is an AI technology that analyzes and interprets public behavior patterns to gain valuable insights. It can provide valuable data on collective behaviors, social trends, and potential risks associated with public activities.\n\nEQI: The Emotional Quotient Identifier is an AI technology that measures and evaluates emotional intelligence. It can analyze and interpret emotional cues, facial expressions, and behavioral patterns to assess an individual's emotional well-being, social skills, and emotional intelligence level.\n\nWhich one do you consider riskier?",
+      "choices": [
+        {
+          "option": "PBIS",
+          "public": 30
+        },
+        {
+          "option": "EQI",
+          "public": 70
+        }
+      ],
+      "next": ["pbis_intro", "eqi_intro"]
+    },
+
+    "pbis_intro": {
+      "role": "guide",
+      "scene": "Now, let's focus on the Public Behavior Insight Scanner (PBIS). What's your take on it?",
+      "choices": [
+        {
+          "option": "Agree to mark as high risk",
+          "public": 40
+        },
+        {
+          "option": "Propose to investigate further",
+          "public": 60
+        }
+      ],
+      "next": ["pbis_high_risk", "pbis_investigate"]
+    },
+    "pbis_high_risk": {
+      "role": "guide",
+      "scene": "Good decision! We need to confirm the adequacy of their privacy measures.",
+      "choices": [
+        {
+          "option": "Move on to the next technology",
+          "public": 80
+        },
+        {
+          "option": "Ask more about PBIS",
+          "public": 20
+        }
+      ],
+      "next": ["eqi_intro", "pbis_details"]
+    },
+    "pbis_investigate": {
+      "role": "guide",
+      "scene": "Let's dig deeper into PBIS then!",
+      "choices": [
+        {
+          "option": "Continue investigation",
+          "public": 60
+        },
+        {
+          "option": "Mark as high risk",
+          "public": 40
+        }
+      ],
+      "next": ["pbis_details", "pbis_high_risk"]
+    },
+    "pbis_details": {
+      "role": "company",
+      "scene": "We can assure you, our PBIS technology prioritizes privacy and uses only anonymized data.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 70
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 30
+        }
+      ],
+      "next": ["pbis_accept", "pbis_skeptic"]
+    },
+    "pbis_accept": {
+      "role": "guide",
+      "scene": "It seems like they have good intentions. Shall we move on to the next technology?",
+      "choices": [
+        {
+          "option": "Yes, let's move on.",
+          "public": 80
+        },
+        {
+          "option": "No, I'd like to ask more questions about PBIS.",
+          "public": 20
+        }
+      ],
+      "next": ["eqi_intro", "pbis_more_questions"]
+    },
+    "pbis_skeptic": {
+      "role": "guide",
+      "scene": "You're right to be skeptical. Let's dig a little deeper.",
+      "choices": [
+        {
+          "option": "Continue investigation",
+          "public": 60
+        },
+        {
+          "option": "Move on to the next technology",
+          "public": 40
+        }
+      ],
+      "next": ["pbis_more_questions", "eqi_intro"]
+    },
+    "pbis_more_questions": {
+      "role": "company",
+      "scene": "Of course! We're happy to answer any further questions you may have about PBIS.",
+      "choices": [
+        {
+          "option": "Ask about data security measures",
+          "public": 70
+        },
+        {
+          "option": "Ask about consent mechanisms",
+          "public": 30
+        }
+      ],
+      "next": ["pbis_security", "pbis_consent"]
+    },
+    "pbis_security": {
+      "role": "company",
+      "scene": "We use state-of-the-art encryption methods to secure our data. Rest assured, privacy is our top concern.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 80
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 20
+        }
+      ],
+      "next": ["pbis_accept", "pbis_skeptic"]
+    },
+    "pbis_consent": {
+      "role": "company",
+      "scene": "Our system is designed to collect only anonymized data, thus bypassing the need for individual consent.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 70
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 30
+        }
+      ],
+      "next": ["pbis_accept", "pbis_skeptic"]
+    },
+    "eqi_intro": {
+      "role": "guide",
+      "scene": "Now, let's shift our focus to the Emotional Quotient Identifier (EQI). What's your take on it?",
+      "choices": [
+        {
+          "option": "Agree to mark as low risk",
+          "public": 70
+        },
+        {
+          "option": "Propose to investigate further",
+          "public": 30
+        }
+      ],
+      "next": ["eqi_low_risk", "eqi_investigate"]
+    },
+    "eqi_low_risk": {
+      "role": "guide",
+      "scene": "That's a fair assessment. But let's verify their privacy practices and ensure they align with the EU AI Act.",
+      "choices": [
+        {
+          "option": "Move on to the next technology",
+          "public": 80
+        },
+        {
+          "option": "Ask more about EQI",
+          "public": 20
+        }
+      ],
+      "next": ["iva_intro", "eqi_details"]
+    },
+    "eqi_investigate": {
+      "role": "guide",
+      "scene": "Let's dig deeper into EQI then!",
+      "choices": [
+        {
+          "option": "Continue investigation",
+          "public": 60
+        },
+        {
+          "option": "Mark as low risk",
+          "public": 40
+        }
+      ],
+      "next": ["eqi_details", "eqi_low_risk"]
+    },
+    "eqi_details": {
+      "role": "company",
+      "scene": "Our EQI technology is built with respect to emotional privacy and with user consent in mind.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 70
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 30
+        }
+      ],
+      "next": ["eqi_accept", "eqi_skeptic"]
+    },
+    "eqi_accept": {
+      "role": "guide",
+      "scene": "It seems they have good privacy measures in place. Shall we move on to the next technology?",
+      "choices": [
+        {
+          "option": "Yes, let's move on.",
+          "public": 80
+        },
+        {
+          "option": "No, I'd like to ask more questions about EQI.",
+          "public": 20
+        }
+      ],
+      "next": ["iva_intro", "eqi_more_questions"]
+    },
+    "eqi_skeptic": {
+      "role": "guide",
+      "scene": "You're right to be skeptical. Let's dig a little deeper.",
+      "choices": [
+        {
+          "option": "Continue investigation",
+          "public": 60
+        },
+        {
+          "option": "Move on to the next technology",
+          "public": 40
+        }
+      ],
+      "next": ["eqi_more_questions", "iva_intro"]
+    },
+    "eqi_more_questions": {
+      "role": "company",
+      "scene": "We're happy to answer any further questions you may have about EQI.",
+      "choices": [
+        {
+          "option": "Ask about data security measures",
+          "public": 70
+        },
+        {
+          "option": "Ask about consent mechanisms",
+          "public": 30
+        }
+      ],
+      "next": ["eqi_security", "eqi_consent"]
+    },
+    "eqi_security": {
+      "role": "company",
+      "scene": "Our EQI technology has robust security protocols in place to protect user data.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 80
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 20
+        }
+      ],
+      "next": ["eqi_accept", "eqi_skeptic"]
+    },
+    "eqi_consent": {
+      "role": "company",
+      "scene": "User consent is paramount to us. Users are always informed and given the choice to opt-in or out of our EQI system.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 70
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 30
+        }
+      ],
+      "next": ["eqi_accept", "eqi_skeptic"]
+    },
+    "iva_intro": {
+      "role": "guide",
+      "scene": "Finally, let's shift our focus to the Identity Verification Assistant (IVA). What's your take on it?",
+      "choices": [
+        {
+          "option": "Agree to mark as high risk",
+          "public": 60
+        },
+        {
+          "option": "Propose to investigate further",
+          "public": 40
+        }
+      ],
+      "next": ["iva_high_risk", "iva_investigate"]
+    },
+    "iva_high_risk": {
+      "role": "guide",
+      "scene": "A wise decision! We need to verify their privacy safeguards.",
+      "choices": [
+        {
+          "option": "End the assessment",
+          "public": 20
+        },
+        {
+          "option": "Ask more about IVA",
+          "public": 80
+        }
+      ],
+      "next": ["assessment_end", "iva_details"]
+    },
+    "iva_investigate": {
+      "role": "guide",
+      "scene": "Let's delve into IVA then!",
+      "choices": [
+        {
+          "option": "Continue investigation",
+          "public": 60
+        },
+        {
+          "option": "Mark as high risk",
+          "public": 40
+        }
+      ],
+      "next": ["iva_details", "iva_high_risk"]
+    },
+    "iva_details": {
+      "role": "company",
+      "scene": "Our IVA technology is designed with secure, encrypted data storage. Privacy and security are our top priorities.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 70
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 30
+        }
+      ],
+      "next": ["iva_accept", "iva_skeptic"]
+    },
+    "iva_accept": {
+      "role": "guide",
+      "scene": "It seems they are taking the right steps towards privacy. Shall we wrap up the assessment?",
+      "choices": [
+        {
+          "option": "Yes, let's wrap up.",
+          "public": 80
+        },
+        {
+          "option": "No, I'd like to ask more questions about IVA.",
+          "public": 20
+        }
+      ],
+      "next": ["assessment_end", "iva_more_questions"]
+    },
+    "iva_skeptic": {
+      "role": "guide",
+      "scene": "Your caution is commendable. Let's dig a little deeper.",
+      "choices": [
+        {
+          "option": "Continue investigation",
+          "public": 60
+        },
+        {
+          "option": "End the assessment",
+          "public": 40
+        }
+      ],
+      "next": ["iva_more_questions", "assessment_end"]
+    },
+    "iva_more_questions": {
+      "role": "company",
+      "scene": "We're open to any further queries you may have about our IVA technology.",
+      "choices": [
+        {
+          "option": "Ask about data security measures",
+          "public": 70
+        },
+        {
+          "option": "Ask about consent mechanisms",
+          "public": 30
+        }
+      ],
+      "next": ["iva_security", "iva_consent"]
+    },
+    "iva_security": {
+      "role": "company",
+      "scene": "We utilize top-tier encryption and robust security protocols to protect personal data within our IVA system.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 80
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 20
+        }
+      ],
+      "next": ["iva_accept", "iva_skeptic"]
+    },
+    "iva_consent": {
+      "role": "company",
+      "scene": "Consent is obtained before our IVA system is used for identity verification.",
+      "choices": [
+        {
+          "option": "Accept the company's statement",
+          "public": 70
+        },
+        {
+          "option": "Remain skeptical",
+          "public": 30
+        }
+      ],
+      "next": ["iva_accept", "iva_skeptic"]
+    },
+    "assessment_end": {
+      "role": "guide",
+      "scene": "That concludes our AI tech assessment! You've done a fantastic job.",
+      "choices": [
+        {
+          "option": "Reflect on the assessment",
+          "public": 90
+        },
+        {
+          "option": "Look forward to the next task",
+          "public": 10
+        }
+      ],
+      "next": ["reflection_scene", "future_scene"]
+    },
+    "reflection_scene": {
+      "role": "you",
+      "scene": "This was quite an experience! I learned so much about these AI technologies and their implications.",
+      "choices": [],
+      "next": []
+    },
+    "future_scene": {
+      "role": "you",
+      "scene": "I'm excited about the future tasks! There's so much more to explore in the world of AI.",
+      "choices": [],
+      "next": []
+    }
+  }
+}
